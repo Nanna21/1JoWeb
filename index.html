@@ -176,13 +176,46 @@ h1 { color: #333; font-size: 2.8rem; margin-bottom: 10px; }
 }
 
 
-/* 내가 쓴 코드 */
+/* 5 */
 .card-5 {
-    background: linear-gradient(180deg, #004927, #d5f6ff);
-    color: rgb(38, 2, 43);
+    background: linear-gradient(135deg, #fffcf0 0%, #fff3b0 100%);
 }
 
 .badge-5 {
+    position: absolute;
+    top: 0;
+    left: -8px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    background-color: rgba(255, 153, 51, 0.95);
+    color: #fff;
+    transform: rotate(-40deg);
+}
+
+.secret-memo-5 {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    margin-top: 15px;
+    color: #333;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.card-5:hover .secret-memo-5 {
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/* 내가 쓴 코드 */
+.card-6 {
+    background: linear-gradient(180deg, #004927, #d5f6ff);
+    transform: rotate(-3deg);
+    color: rgb(38, 2, 43);
+}
+
+.badge-6 {
     position: absolute;
     top: -10px;
     right: -10px;
@@ -192,12 +225,12 @@ h1 { color: #333; font-size: 2.8rem; margin-bottom: 10px; }
     border-radius: 20px;
 }
 
-.secret-memo-5 {
+.secret-memo-6 {
     visibility: hidden;
     margin-top: 10px;
 }
 
-.card-5:hover .secret-memo-5 {
+.card-6:hover .secret-memo-6 {
     visibility: visible;
 }
 
@@ -252,14 +285,24 @@ h1 { color: #333; font-size: 2.8rem; margin-bottom: 10px; }
         <div class="secret-memo-4">참고 : 5년간 유지</div>
     </div>
 
-
     <div class="card card-5">
-        <div class="badge-5">GameLife🎮</div>
+        <div class="badge-5">Want!</div>
+        <img src="https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTJfMTM2/MDAxNjg5MTE4NjgyOTk0.P8NIHTsnnchDfqcAKLbNVK8r5gRXgBcL3crH6EbrfTkg.K3pLe5_qHTMNnFrwh52G3USnRHZo_zUcJCi0bqVtB9og.JPEG.doojool69/23%EF%BC%8D07%EF%BC%8D09%EF%BC%8D07%EF%BC%8D38%EF%BC%8D38%EF%BC%8D993%EF%BC%BFdeco.jpg?type=w800" 
+         alt="운정">
+        <h2>이동성의 꿈</h2>
+        <p>1. 꾸준히 운동하기</p>
+        <p>2. 코딩 실력 늘리기</p>
+        <div class="secret-memo-5">TMI: 끈기가 없음</div>
+    </div>
+
+
+    <div class="card card-6">
+        <div class="badge-6">GameLife🎮</div>
         <img src="Pincerna.png" alt="게임 사진">
         <h2>이나경의 꿈💭</h2>
         <p>🌟 동아리 성공적으로 운영하기</p>
         <p>🌐 게임 출시하기</p>
-        <div class="secret-memo-5">동아리 부기장&팀장으로써 2026년도 힘내보겠습니다</div>
+        <div class="secret-memo-6">동아리 부기장&팀장으로써 2026년도 힘내보겠습니다</div>
     </div>
 
 </main>
