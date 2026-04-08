@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>내 버킷리스트 카드</title>
+    <style>
+        /* 기본 카드 디자인 (자유롭게 수정 가능) */
+        .card {
+            width: 300px;
+            margin: 50px auto;
+            background: linear-gradient(135deg, #fffcf0 0%, #fff3b0 100%);
+            padding: 15px 15px 35px 15px;
+            border-radius: 2px 2px 15px 5px;
+            box-shadow: 3px 5px 15px rgba(0,0,0,0.15);
+            /* 배지의 기준점이 되기 위한 필수 속성 */
+            position: relative; 
+        }
+        .card img { width: 100%; height: 200px; object-fit: cover; border-radius: 5px; margin-bottom: 15px; }
+        .card h2 { color: #2c3e50; font-size: 1.5rem; margin-bottom: 10px; }
+        .card p { color: #444; font-size: 1.1rem; line-height: 1.5; }
+        .card .secret-memo {
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0s linear 0.2s, opacity 0.2s ease;
+            margin-top: 15px;
+            color: #333;
+            font-size: 1.2rem;
+            text-align: left;
+        }
+        .card:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 10;
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+        .card:hover .secret-memo {
+            visibility: visible;
+            opacity: 1;
+            transition-delay: 0s;
+        }
+        /* 1. 배지 (absolute) 관련 CSS를 작성하세요 */
+        
+
+        /* 2. 비밀 메모 (visibility) 및 hover 효과 관련 CSS를 작성하세요 */
+        
+
+    </style>
+</head>
+<body>
+
+    
+        <!-- 팀원 카드 시작 -->
+        <div class="card secret-memo">
+            <!-- 개인별로 배지 추가하기 (absolute 실습) -->
+            <div class="badge"
+                style="position: absolute; top: 0px; left: -8px; padding: 8px 12px; border-radius: 12px; background-color: rgba(255, 153, 51, 0.95); color: #fff; font-size: 1rem; font-weight: 700; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); transform: rotate(-40deg);">
+                Want!</div>
+
+            <img src="https://mblogthumb-phinf.pstatic.net/MjAyMzA3MTJfMTM2/MDAxNjg5MTE4NjgyOTk0.P8NIHTsnnchDfqcAKLbNVK8r5gRXgBcL3crH6EbrfTkg.K3pLe5_qHTMNnFrwh52G3USnRHZo_zUcJCi0bqVtB9og.JPEG.doojool69/23%EF%BC%8D07%EF%BC%8D09%EF%BC%8D07%EF%BC%8D38%EF%BC%8D38%EF%BC%8D993%EF%BC%BFdeco.jpg?type=w800"
+                alt="운정">
+            <h2>이동성의 목표</h2>
+            <p>1. 꾸준히 운동하기</p>
+            <p>2. 코딩 실력 늘리기</p>
+
+           <div class="secret-memo">TMI: 끈기가 없음</div>
+    </body>
+</html>
