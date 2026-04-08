@@ -2,118 +2,203 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>버킷리스트 카드</title>
+<title>1조 버킷리스트 아트 월</title>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
 
 <style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
 body {
-    background: #0b0d12;
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Nanum Pen Script', cursive;
+    background-color: #d4b895;
+    background-image: url('https://www.transparenttextures.com/patterns/cork-board.png');
+    background-attachment: fixed;
+    text-align: center;
+    padding-bottom: 100px;
 }
 
-/* 카드 */
+header {
+    margin: 60px auto 40px auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: inline-block;
+    padding: 20px 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+h1 { color: #333; font-size: 2.8rem; margin-bottom: 10px; }
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.gallery-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+ /* 공통 카드 스타일 */
 .card {
-    width: 320px;
-    margin: 80px auto;
-    background: linear-gradient(160deg, #141821, #0e1016);
-    padding: 15px 15px 30px;
-    border-radius: 14px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+    float: left;
+    width: 31.33%;
+    margin: 1%;
+    padding: 15px 15px 35px;
+    border-radius: 15px;
     position: relative;
-    overflow: hidden;
-    transition: 0.4s;
+    box-shadow: 3px 5px 15px rgba(0,0,0,0.15);
+    transition: 0.3s;
 }
 
-/* hover 효과 (네온 강조) */
 .card:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 0 20px rgba(255,70,85,0.6),
-                0 0 40px rgba(255,70,85,0.3);
-}
-
-/* 배경 텍스트 */
-.card::after {
-    content: "VALORANT";
-    position: absolute;
-    bottom: 10px;
-    right: -20px;
-    font-size: 60px;
-    font-weight: 900;
-    color: rgba(255,255,255,0.03);
-    transform: rotate(-15deg);
-    pointer-events: none;
-}
-
-/* 이미지 */
-.img-wrap {
-    position: relative;
+    transform: scale(1.05);
+    z-index: 10;
 }
 
 .card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 5px;
+    margin-bottom: 15px;
 }
 
-/* 이미지 위 빨간 오버레이 */
-.img-wrap::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        120deg,
-        rgba(255,70,85,0.35),
-        transparent 60%
-    );
-    border-radius: 10px;
+.card h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
 }
 
-/* 제목 */
-.title {
-    color: #fff;
-    font-size: 1.4rem;
-    margin: 15px 0;
-    font-weight: bold;
-    letter-spacing: 1px;
-
-    text-shadow:
-        1px 0 #ff4655,
-        -1px 0 #00f0ff,
-        0 0 6px rgba(255,70,85,0.5);
-
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-}
-
-/* 내용 */
 .card p {
-    color: #cfd3dc;
-    font-size: 1rem;
-    margin-bottom: 8px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: left;
 }
 
-/* 배지 */
-.badge {
+
+/* 1 */
+.card-1 {
+    background: linear-gradient(135deg, #fffcf0, #fff3b0);
+}
+
+.badge-1 {
     position: absolute;
-    top: 15px;
-    right: 15px;
+    top: -15px;
+    right: -10px;
+    background: rgb(161,212,20);
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+
+.secret-memo-1 {
+    visibility: hidden;
+    margin-top: 10px;
+}
+
+.card-1:hover .secret-memo-1 {
+    visibility: visible;
+}
+
+
+/* 2 */
+.card-2 {
+    background: linear-gradient(160deg, #141821, #0e1016);
+    color: white;
+}
+
+.badge-2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
     background: #ff4655;
-    color: #fff;
-    padding: 6px 10px;
-    font-size: 0.8rem;
-    border-radius: 6px;
-    font-weight: bold;
-    box-shadow: 0 0 12px rgba(255,70,85,0.8);
+    padding: 5px 10px;
 }
 
-/* 노이즈 텍스처 */
-.card::before {
-    content: "";
+.title-2 {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+
+/* 3 */
+.card-3 {
+    background: linear-gradient(135deg, #FF9A8B, #FDCB82, #4A90E2);
+    transform: rotate(-3deg);
+}
+
+.badge-3 {
     position: absolute;
-    inset: 0;
-    background-image: url("https://www.transparenttextures.com/patterns/noise.png");
-    opacity: 0.05;
-    pointer-events: none;
+    top: -10px;
+    right: -10px;
+    background: #ff4757;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.secret-memo-3 {
+    visibility: hidden;
+    margin-top: 10px;
+}
+
+.card-3:hover .secret-memo-3 {
+    visibility: visible;
+}
+
+
+/* 4 */
+.card-4 {
+    background: linear-gradient(135deg, #000, #1b1844);
+    color: white;
+}
+
+.badge-4 {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #0c075b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.secret-memo-4 {
+    visibility: hidden;
+    bottom: -20px;
+    left: 10px;
+    background: cyan;
+    padding: 5px;
+}
+
+.card-4:hover .secret-memo-4 {
+    visibility: visible;
+}
+
+
+/* 내가 쓴 코드 */
+.card-5 {
+    background: linear-gradient(180deg, #004927, #d5f6ff);
+    color: rgb(38, 2, 43);
+}
+
+.badge-5 {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(90deg, #ff0000, #0015ff);
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.secret-memo-5 {
+    visibility: hidden;
+    margin-top: 10px;
+}
+
+.card-5:hover .secret-memo-5 {
+    visibility: visible;
 }
 
 </style>
@@ -121,19 +206,63 @@ body {
 
 <body>
 
-<div class="card">
-    <span class="badge">VALORANT</span>
+<header>
+    <h1>⭐ 2026 1조 버킷 리스트 아트 월 ⭐</h1>
+    <p style="font-size: 1.5rem; color: #555;">
+        저희 1조의 꿈들을 코르크 보드에 붙였습니다!
+    </p>
+</header>
 
-    <div class="img-wrap">
-        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6?w=800&auto=format&fit=crop&q=60">
+<main class="gallery-container clearfix">
+    
+    <div class="card card-1">
+        <div class="badge-1">Hot🔥</div>
+        <img src="https://th.bing.com/th/id/OIP.ZYurYGaOg4SiXhEJQikvcAHaHa">
+        <h2>✨ 서동건의 꿈</h2>
+        <p>🍤 일본 여행</p>
+        <p>💻 게임 만들기</p>
+        <div class="secret-memo-1">여권 없음</div>
     </div>
 
-    <div class="title">🎯 김지현의 꿈</div>
+    
+    <div class="card card-2">
+        <span class="badge-2">VALORANT</span>
+        <img src="https://images.unsplash.com/photo-1598550476439-6847785fcea6">
+        <div class="title-2">🎯 김지현의 꿈</div>
+        <p>🏆 대회 나가기</p>
+        <p>🎮 직관하기</p>
+    </div>
 
-    <p>🏆 발로란트 대회 나가기</p>
-    <p>🎮 발로란트 대회 직관하기</p>
+    
+    <div class="card card-3">
+        <div class="badge-3">Apple Park🏢</div>
+        <img src="https://images.unsplash.com/photo-1524046909351-84f69445d990">
+        <h2>😎 임성진의 꿈</h2>
+        <p>🍎 애플파크 가기</p>
+        <p>🎮 게임 만들기</p>
+        <div class="secret-memo-3">개발자 보고 싶음</div>
+    </div>
 
-</div>
+
+    <div class="card card-4">
+        <h2>이건우의 꿈</h2>
+        <span class="badge-4">🎯</span>
+        <img src="https://www.shutterstock.com/image-vector/stick-figure-lifting-dumbbells-illustration-260nw-2621078429.jpg">
+        <p>중요한 목표 : 건강을 위해서 근력과 체력 키우기</p>
+        <div class="secret-memo-4">참고 : 5년간 유지</div>
+    </div>
+
+
+    <div class="card card-5">
+        <div class="badge-5">GameLife🎮</div>
+        <img src="./images/Pincerna.png" alt="게임 사진">
+        <h2>이나경의 꿈💭</h2>
+        <p>🌟 동아리 성공적으로 운영하기</p>
+        <p>🌐 게임 출시하기</p>
+        <div class="secret-memo-5">동아리 부기장&팀장으로써 2026년도 힘내보겠습니다</div>
+    </div>
+
+</main>
 
 </body>
 </html>
